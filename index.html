@@ -9,8 +9,8 @@
   <link rel="stylesheet" type="text/css" href="./css/readable.min.css"> -->
   <script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
   <link rel="stylesheet" type="text/css" href="./css/format.css">
-  <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
-  <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+  <link href="./css/dark.css" rel="stylesheet">
+  <script src="./js/highlight.pack.js"></script>
   <script >hljs.initHighlightingOnLoad();</script> 
 </head>
 <body>
@@ -69,7 +69,6 @@
         success: function (data) {
           $("#mdcontent").html(data);
           $('pre code').each(function(i, block) {
-            console.log(block)
             hljs.highlightBlock(block);
           });
         }
